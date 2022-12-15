@@ -35,6 +35,8 @@ class HomePage extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     WindowSize windowSize = ref.watch(windowSizeProvider).windowSize;
+    final ThemeData themeData = Theme.of(context);
+    final TextTheme textTheme = themeData.textTheme;
 
     void actionChangeWindowSize(WindowSizeEnum windowSizeEnum) {
       _changeWindowSize(windowSizeEnum);
@@ -45,12 +47,19 @@ class HomePage extends ConsumerWidget {
 
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.indigo,
-        title: const Text(
+        backgroundColor: themeData.colorScheme.primary,
+        title: Text(
           "Simple Flutter Resize Window",
+          style: TextStyle(
+            color: themeData.colorScheme.onPrimary,
+          ),
         ),
         actions: [
           PopupMenuButton(
+            icon: Icon(
+              Icons.more_vert,
+              color: themeData.colorScheme.onPrimary,
+            ),
             itemBuilder: (BuildContext context) {
               return [
                 PopupMenuItem(
@@ -84,7 +93,10 @@ class HomePage extends ConsumerWidget {
       ),
       body: Center(
         child: Text(
-            "Window Size: ${windowSize.width.toInt()}x${windowSize.height.toInt()}"),
+          "Window Size\n${windowSize.width.toInt()}x${windowSize.height.toInt()}",
+          textAlign: TextAlign.center,
+          style: textTheme.headline4,
+        ),
       ),
     );
   }

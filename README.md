@@ -12,7 +12,7 @@ This app is built with [Flutter](https://flutter.dev/) 3.3.9 and works out of th
 
 ## Useful Links
 
-* [ChangeNotifierProvider on Riverpod Docs](https://riverpod.dev/docs/providers/change_notifier_provider)
+* [StateNotifierProvider on Riverpod Docs](https://riverpod.dev/docs/providers/state_notifier_provider/)
 * [How to Use Enhanced Enums with Members in Dart 2.17](https://codewithandrea.com/tips/enums-with-members-dart-2.17)
 
 ### License

@@ -15,13 +15,14 @@ class HomePage extends ConsumerWidget {
     final ThemeData themeData = Theme.of(context);
 
     void actionChangeWindowSize(WindowSizeEnum windowSizeEnum) {
+      //Update window size
       windowManager.setSize(
         Size(
           windowSizeEnum.width,
           windowSizeEnum.height,
         ),
       );
-
+      //Read provider and change status
       ref.read(windowSizeProvider.notifier).changeSize(
             WindowSize(
               width: windowSizeEnum.width,

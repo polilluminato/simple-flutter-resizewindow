@@ -34,14 +34,15 @@ class HomePage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    WindowSize windowSize = ref.watch(windowSizeProvider).windowSize;
+    WindowSize windowSize = ref.watch(windowSizeProvider);
     final ThemeData themeData = Theme.of(context);
     final TextTheme textTheme = themeData.textTheme;
 
     void actionChangeWindowSize(WindowSizeEnum windowSizeEnum) {
       _changeWindowSize(windowSizeEnum);
       ref.read(windowSizeProvider.notifier).changeSize(
-            Size(windowSizeEnum.width, windowSizeEnum.height),
+            WindowSize(
+                width: windowSizeEnum.width, height: windowSizeEnum.height),
           );
     }
 

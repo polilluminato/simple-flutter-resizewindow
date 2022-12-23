@@ -4,11 +4,13 @@
 
 Simple Flutter Desktop app to demonstrate how to resize the app Window.
 
-This app is built with [Flutter](https://flutter.dev/) 3.3.9 and works out of the box on:
+This app is built with [Flutter](https://flutter.dev/) 3.3.10 and works out of the box on:
 
 :white_check_mark: Windows<br>
 :white_check_mark: macOS<br>
 :white_check_mark: Linux<br>
+
+You can find the full article on: [Change window size on Flutter programmatically](https://blog.albertobonacina.com/change-window-size-on-flutter-programmatically)
 
 ## Useful Links
 
